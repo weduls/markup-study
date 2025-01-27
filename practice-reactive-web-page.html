@@ -11,45 +11,40 @@
 <section>
     <h2>My Keyword</h2>
     <ul>
-        <li>주의깊게</li>
-        <li>평온한</li>
-        <li>까다로운</li>
-        <li>감성정인</li>
+        <li class="keyword-list">주의깊게</li>
+        <li class="keyword-list">평온한</li>
+        <li class="keyword-list">까다로운</li>
+        <li class="keyword-list">감성정인</li>
     </ul>
 </section>
 <section>
     <h2>My Color</h2>
-    <ul>
-        <li>pink</li>
-        <li>green</li>
-        <li>red</li>
-        <li>black</li>
-    </ul>
+    <div class="gradient-bar"></div>
 </section>
 <section>
     <h2>My Hobby</h2>
     <ul>
-        <li><img src="study.png" alt=""/>공부</li>
-        <li><img src="tennis.png" alt=""/>테니스</li>
-        <li><img src="vacation.png" alt=""/>여행</li>
-        <li><img src="picture.png" alt=""/>미술</li>
+        <li class="like-list"><img src="study.png" alt=""/>공부</li>
+        <li class="like-list"><img src="tennis.png" alt=""/>테니스</li>
+        <li class="like-list"><img src="vacation.png" alt=""/>여행</li>
+        <li class="like-list"><img src="picture.png" alt=""/>미술</li>
     </ul>
 </section>
 <section>
     <h2>My Food</h2>
     <ul>
-        <li><img src="bibim.png" alt=""/>비빔밥</li>
-        <li><img src="stake.png" alt=""/>스테이크</li>
-        <li><img src="chobab.png" alt=""/>초밥</li>
-        <li><img src="bread.png" alt=""/>빵</li>
+        <li class="like-list"><img src="bibim.png" alt=""/>비빔밥</li>
+        <li class="like-list"><img src="stake.png" alt=""/>스테이크</li>
+        <li class="like-list"><img src="chobab.png" alt=""/>초밥</li>
+        <li class="like-list"><img src="bread.png" alt=""/>빵</li>
     </ul>
 </section>
 <footer>
     <address>
         <h2>Contract</h2>
         <ul>
-            <li>000-0000-0000</li>
-            <li>a@a.com</li>
+            <li class="contact-list">000-0000-0000</li>
+            <li class="contact-list">a@a.com</li>
         </ul>
     </address>
 </footer>
@@ -108,6 +103,11 @@
         margin-left: auto;
         background-color: pink;
     }
+    .gradient-bar {
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to right, #f5f588, #9afcc2);
+    }
 
     h1, h2, li {
         font-family: "BM Jua", serif;
@@ -121,6 +121,9 @@
         font-size: 20px;
         font-weight: 700;
     }
+    .contact-list {
+        display: block;
+    }
     li {
         font-size: 26px;
         font-weight: 300;
@@ -132,5 +135,41 @@
     footer li {
         color: white;
         text-align: left;
+    }
+    h1 {
+        font-size: 80px;
+    }
+    .keyword-list {
+        width: 100%;
+    }
+    .keyword-list:nth-child(-n+3) {
+        margin-right: 40px;
+    }
+    .like-list {
+        width: 100%;
+        display: inline-block;
+    }
+    .like-list:nth-child(-n+3) {
+        margin-right: 14px;
+        margin-bottom: 40px;
+    }
+    .like-list img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    footer {
+        background: black;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .contact-list {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    @media (max-width: 750px) {
+        header, section, address {
+            width: 85%;
+            background: #9afcc2;
+        }
     }
 </style>
